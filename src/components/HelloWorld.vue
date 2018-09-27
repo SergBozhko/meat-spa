@@ -1,15 +1,29 @@
 <template>
-  <div class="hello">
-  </div>
+  <!-- Первый блок (Шапка)-->
+  <header>
+    <div class="header__logo">
+      <p>Мясная лавка</p>
+    </div>
+    <menu-navigation></menu-navigation>
+
+  </header>
 </template>
 
 <script>
+import menuNavigation from './navigation';
+
 export default {
   name: 'HelloWorld',
+  components: {
+    menuNavigation
+  },
   data() {
     return {
-      msg: 'Welcome to Your Vue.js App'
+
     };
+  },
+  mounted() {
+    console.log('Компонет создался');
   }
 };
 </script>
@@ -19,15 +33,5 @@ export default {
 h1, h2 {
   font-weight: normal;
 }
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
-}
+
 </style>
